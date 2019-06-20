@@ -31,7 +31,7 @@ The plugin can be installed via [Cordova-CLI][CLI] and is publicly available on 
 
 Execute from the projects root folder:
 
-    $ cordova plugin add cordova-plugin-background-mode
+    $ cordova plugin add cordova-plugin-background-mode-with-fixes
 
 Or install a specific version:
 
@@ -39,11 +39,11 @@ Or install a specific version:
 
 Or install the latest head version:
 
-    $ cordova plugin add https://github.com/katzer/cordova-plugin-background-mode.git
+    $ cordova plugin add https://github.com/RADAR-base/cordova-plugin-background-mode.git
 
 Or install from local source:
 
-    $ cordova plugin add cordova-plugin-background-mode --searchpath <path>
+    $ cordova plugin add cordova-plugin-background-mode-with-fixes --searchpath <path>
 
 
 ## Usage
