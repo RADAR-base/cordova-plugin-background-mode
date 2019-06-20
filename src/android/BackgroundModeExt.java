@@ -143,18 +143,14 @@ public class BackgroundModeExt extends CordovaPlugin {
     /**
      * Moves the app to the foreground.
      */
-    private void moveToForeground()
+    private void moveToForeground() 
     {
-        Activity  app = getApp();
-        Intent intent = getLaunchIntent();
+        Activity app = getActivity();
+        Intent intent = new Intent(app, app.getClass());
+        intent.addFlags(  Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
+                        | Intent.FLAG_ACTIVITY_SINGLE_TOP);
 
-        intent.addFlags(
-                Intent.FLAG_ACTIVITY_REORDER_TO_FRONT |
-                Intent.FLAG_ACTIVITY_SINGLE_TOP |
-                Intent.FLAG_ACTIVITY_CLEAR_TOP);
-
-        clearScreenAndKeyguardFlags();
-        app.startActivity(intent);
+       app.startActivity(intent);
     }
 
     /**
